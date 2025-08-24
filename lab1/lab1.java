@@ -1,19 +1,20 @@
-// CS 325 Data Structures
+// CS 325 Data Structures - Lehman
+//
+// fall 2025
+// lab1.java
+//
 // Lab #1 - (20 points) - Due: 9.1.2023 (5 pm)
 // Java Intro 
 // Fall 2025
+//
 
-//(*** note will need to change to lab1.java)
-class Main {
+class lab1 {
 
 	public static void main(String[] args) {
-		// #0 create a repl account at http://replit.com
-		// create a new Java repl
+		// #0 
 		// add your name to the comments
 		// note: all code should automatically adjust via variables
 		// goal is learn (or review) basic Java syntax and commands
-		// download your code for backup as .zip
-		// upload lab1.java
 
 		// #1 create variables and set to values as shown.
 		// add a new last_name variable.
@@ -29,6 +30,7 @@ class Main {
 		// gpa of type double
 		double gpa = 3.8;
 
+
 		// #2 print the following message with the variables from #1
 		// your code must use the values set in #1,
 		// test your code by changing the values above to your first, last, age and gpa.
@@ -41,6 +43,7 @@ class Main {
 		System.out.println("In ten years the student will be " + new_age + " years old.");
 		System.out.println();
 
+
 		// #3 modify the following loop to calculate and print the square root
 		// of the numbers 3 to 100 using 2 decimal places
 		// hint: use Math.sqrt()
@@ -52,6 +55,7 @@ class Main {
 		}
 		System.out.println();
 		System.out.println();
+
 
 		// #4 use a while loop to display all values from 1 to 1000 that are
 		// evenly divisible by variable N (ie. int N = 3;)
@@ -69,6 +73,7 @@ class Main {
 		System.out.println();
 		System.out.println();
 
+
 		// #5 use if statements to determine and display the honor roll
 		// status based on gpa from #1
 		//
@@ -79,6 +84,7 @@ class Main {
 		if (gpa >= 3.75 && gpa <= 4.0)
 			System.out.println("dean's list - high honors");
 		System.out.println();
+
 
 		// #6 create one dimensional array of (***) ten integers
 		// calculate and display the (***) largest integer
@@ -91,11 +97,12 @@ class Main {
 		System.out.println("Smallest is " + small);
 		System.out.println();
 
+
 		// #7 create a static method called allSame that takes three integers
 		// and returns true if they are all the same value
 		// and false if they are not all the same value
 		// demonstrate your method with three method calls
-		System.out.println(allSame(10, 20));
+		System.out.println( allSame(10, 20) );
 
 		int value1 = 9;
 		int value2 = 9;
@@ -113,12 +120,13 @@ class Main {
 		System.out.println("Average of values[] = " + getAverage(values));
 		System.out.println();
 
+
 		// #9 copy code into a file called lab1.java.
 		// compile and run your code from the command line.
 		// create a screen capture of your compiling and running the
-		// program code in Replit.com similar to the screenshot shown
+		// program code from a command line similar to the screenshot shown
 		//
-		// upload lab1.java to and your screen capture to Moodle
+		// create a GitHub account and upload a link to your lab1.java code
 
 	}// main
 
@@ -135,6 +143,7 @@ class Main {
 	// (*** modify to calculate average)
 	public static double getAverage(int[] temp) {
 		int sum = 0;
+		
 		for (int i = 0; i < temp.length; i++) {
 			sum = sum + temp[i];
 		}
