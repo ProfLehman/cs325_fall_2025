@@ -21,11 +21,11 @@ print("Hello World")
 ## Java
 
 ```java
-// helloworld.java
+// HelloWorld.java
 // j.l. lehman
 // fall 2025
 
-public class helloworld {
+public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
