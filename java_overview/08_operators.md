@@ -94,7 +94,7 @@ public class Operators {
         System.out.println("x = " + x);
         System.out.println();
 
-        // post vs pre increment
+        // post vs pre increment 
         x = 3;
         int y = 4;
         x = x + (y++);
@@ -102,7 +102,7 @@ public class Operators {
 
         x = 3;
         y = 4;
-        x = x + (++y);
+        x = x + (++y); // Prof. Lehman suggests avoiding these
         System.out.println("x = " + x + ", y = " + y);
     }
 }
@@ -122,7 +122,3 @@ public class Operators {
 
 ---
 
-
-
-Would you like me to also add **comparison and logical operators** (==, !=, <, >, and/or/not) to this page, or keep those separate in a later **“Control Flow”** section?
-```
