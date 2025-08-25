@@ -3,20 +3,24 @@
 // fall 2025
 // lab1.java
 //
-// Lab #1 - (20 points) - Due: 9.1.2023 (5 pm)
+// Lab #1 - (20 points) - Due: 9.29.2025 (5 pm)
 // Java Intro 
 // Fall 2025
 //
+// Read the comments below and update the code to complete each task.
+// Post and upload solutions to your GitHub account and share link to file.
+// Use AI with caution, you must be able to write Java code without AI
 
 class lab1 {
 
 	public static void main(String[] args) {
-		// #0 
-		// add your name to the comments
+		// #0
+		// add your first and last name to the comments
 		// note: all code should automatically adjust via variables
 		// goal is learn (or review) basic Java syntax and commands
 
-		// #1 create variables and set to values as shown.
+		// #1
+		// create variables and set to values as shown.
 		// add a new last_name variable.
 
 		// first_name of type String
@@ -30,8 +34,8 @@ class lab1 {
 		// gpa of type double
 		double gpa = 3.8;
 
-
-		// #2 print the following message with the variables from #1
+		// #2
+		// print the following message with the variables from #1
 		// your code must use the values set in #1,
 		// test your code by changing the values above to your first, last, age and gpa.
 		// note that the age should automatically adjust to +20
@@ -43,8 +47,8 @@ class lab1 {
 		System.out.println("In ten years the student will be " + new_age + " years old.");
 		System.out.println();
 
-
-		// #3 modify the following loop to calculate and print the square root
+		// #3
+		// modify the following loop to calculate and print the square root
 		// of the numbers 3 to 100 using 2 decimal places
 		// hint: use Math.sqrt()
 		// ie 3, 3.16,3.31, ... 10.0,
@@ -56,8 +60,8 @@ class lab1 {
 		System.out.println();
 		System.out.println();
 
-
-		// #4 use a while loop to display all values from 1 to 1000 that are
+		// #4
+		// use a while loop to display all values from 1 to 1000 that are
 		// evenly divisible by variable N (ie. int N = 3;)
 		// if N is set to 3, your code displays 3, 6, 9, ... 999
 		// if N is set to 4, your code displays 4, 8, 12 ... 1000
@@ -73,8 +77,8 @@ class lab1 {
 		System.out.println();
 		System.out.println();
 
-
-		// #5 use if statements to determine and display the honor roll
+		// #5
+		// use if statements to determine and display the honor roll
 		// status based on gpa from #1
 		//
 		// 3.75 to 4.0 dean's list - high honors
@@ -85,8 +89,8 @@ class lab1 {
 			System.out.println("dean's list - high honors");
 		System.out.println();
 
-
-		// #6 create one dimensional array of (***) ten integers
+		// #6
+		// create one dimensional array of (***) ten integers
 		// calculate and display the (***) largest integer
 		int values[] = { 17, 8, 24, 16 };
 		int small = values[0];
@@ -97,12 +101,12 @@ class lab1 {
 		System.out.println("Smallest is " + small);
 		System.out.println();
 
-
-		// #7 create a static method called allSame that takes three integers
+		// #7
+		// create a static method called allSame that takes three integers
 		// and returns true if they are all the same value
 		// and false if they are not all the same value
 		// demonstrate your method with three method calls
-		System.out.println( allSame(10, 20) );
+		System.out.println(allSame(10, 20));
 
 		int value1 = 9;
 		int value2 = 9;
@@ -114,19 +118,20 @@ class lab1 {
 
 		System.out.println();
 
-		// #8 create a static method getAverage that return the getAverage values
+		// #8
+		// create a static method getAverage that return the getAverage values
 		// for all items in a one dimensional array
 		// demonstrate your method using the array from #7
 		System.out.println("Average of values[] = " + getAverage(values));
 		System.out.println();
 
-
-		// #9 copy code into a file called lab1.java.
+		// #9
+		// copy code into a file called lab1.java
 		// compile and run your code from the command line.
 		// create a screen capture of your compiling and running the
-		// program code from a command line similar to the screenshot shown
+		// program code from a command line similar to the screenshot shown in Moodle
 		//
-		// create a GitHub account and upload a link to your lab1.java code
+		// create a GitHub account and upload a link to your lab1.java code in Moodle
 
 	}// main
 
@@ -143,7 +148,7 @@ class lab1 {
 	// (*** modify to calculate average)
 	public static double getAverage(int[] temp) {
 		int sum = 0;
-		
+
 		for (int i = 0; i < temp.length; i++) {
 			sum = sum + temp[i];
 		}
