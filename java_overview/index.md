@@ -1,8 +1,5 @@
 # Intro to Java (with Python Comparisons)
 
-Welcome to the intro programming examples. Each page compares **Python** and **Java** code for the same concept.
----
-
 ## 📚 Contents
 
 1. [Hello World](01_helloworld.md)  
