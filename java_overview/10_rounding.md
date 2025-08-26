@@ -8,20 +8,20 @@ Different languages handle rounding and truncation in slightly different ways.
 ## Python Example
 
 ```python
-# round_example.py
+# Python rounds to the nearest even number
+# -1.5 rounds to -2
+# -2.5 rounds to -2
 
-a = -2.0
-b = a + 0.3
-c = a + 0.5
-d = a + 0.7
-
-print(f"{a} rounded = {round(a)}")     # -2
-print(f"{b} rounded = {round(b)}")     # -2 (rounds to nearest even when exactly .5)
-print(f"{c} rounded = {round(c)}")     # -2 (Banker's rounding: -1.5 -> -2)
-print(f"{d} rounded = {round(d)}")     # -1
-
-# int() truncates toward zero
-print(f"int({d}) = {int(d)}")          # -1
+a = 0.0
+count = 0
+while count <= 10:
+    
+    print(f"{a+.1:.1f} rounded = {round(a+.1)}")   #-n.4
+    print(f"{a:.1f} rounded = {round(a)}")         #-n.5
+    print(f"{a-.1:.1f} rounded = {round(a-.1)}")   #-n.6
+    
+    a = a - .5
+    count = count + 1
 ````
 
 ---
@@ -33,22 +33,61 @@ print(f"int({d}) = {int(d)}")          # -1
 
 public class RoundExample {
     public static void main(String[] args) {
-        double a = -2.0;
-        double b = a + 0.3;
-        double c = a + 0.5;
-        double d = a + 0.7;
 
-        System.out.println(a + " rounded = " + Math.round(a));
-        System.out.println(b + " rounded = " + Math.round(b));
-        System.out.println(c + " rounded = " + Math.round(c));
-        System.out.println(d + " rounded = " + Math.round(d));
+        // Java rounds to next largest number at .5
+        // -1.5 rounds to -1
+        // -2.5 rounds to -2
+        double a = 0.0;
+        int count = 0;
 
-        // Casting to int truncates toward zero
-        System.out.println("(int) " + d + " = " + (int)d);
+        while (count <= 10) {
+
+            System.out.printf("%.1f rounded = %d%n", a + .1, Math.round(a + .1)); // -n.4
+            System.out.printf("%.1f rounded = %d%n", a, Math.round(a)); // -n.5
+            System.out.printf("%.1f rounded = %d%n", a - .1, Math.round(a - .1)); // -n.6
+            a = a - 0.5;
+            count = count + 1;
+        }
+
     }
 }
 ```
 
+| N | Python | Java |
+|----------|:--------:|---------:|
+|0.1 rounded =| 0|0  |
+|0.0 rounded = |0|0  |
+|-0.1 rounded = |0| 0 |
+|-0.4 rounded =| 0| 0 |
+|-0.5 rounded = |0| 0 |
+|-0.6 rounded = |-1| -1|
+|-0.9 rounded =| -1| -1|
+|-1.0 rounded = |-1| -1|
+|-1.1 rounded = |-1| -1|
+|-1.4 rounded =| -1| -1|
+|-**1.5** rounded = |**-2**|**-1**|
+|-1.6 rounded = |-2| -2|
+|-1.9 rounded =| -2| -2|
+|-2.0 rounded = |-2| -2|
+|-2.1 rounded = |-2| -2|
+|-2.4 rounded =| -2| -2|
+|-2.5 rounded = |-2| -2|
+|-2.6 rounded = |-3| -3|
+|-2.9 rounded =| -3| -3|
+|-3.0 rounded = |-3| -3|
+|-3.1 rounded = |-3| -3|
+|-3.4 rounded =| -3| -3|
+|**-3.5** rounded = |**-4**| **-3**|
+|-3.6 rounded = |-4| -4|
+|-3.9 rounded =| -4| -4|
+|-4.0 rounded = |-4| -4|
+|-4.1 rounded = |-4| -4|
+|-4.4 rounded =| -4| -4|
+|-4.5 rounded = |-4| -4|
+|-4.6 rounded = |-5| -5|
+|-4.9 rounded =| -5| -5|
+|-5.0 rounded = |-5| -5|
+|-5.1 rounded = |-5| -5|
 ---
 
 ## Notes & Key Differences
@@ -64,36 +103,5 @@ public class RoundExample {
   * `Math.round(x)` rounds to the nearest integer (half values round away from zero).
 
     * Example: `Math.round(2.5) == 3`, `Math.round(-2.5) == -2`.
-  * Casting `(int)x` truncates toward zero.
-* **C++** (original code) often used tricks like `(int)(value + 0.5)` to round positive numbers.
-  Negative values require care (`-1.5` may round differently than expected).
-
 ---
 
-## Comparison Table: Rounding vs Truncation
-
-| Value | Python `round(x)` | Python `int(x)` | Java `Math.round(x)` | Java `(int)x` |
-| ----- | ----------------- | --------------- | -------------------- | ------------- | 
-| -2.5  | -2 (to even)      | -2              | -2 (away from 0)     | -2            | 
-| -1.5  | -2 (to even)      | -1              | -1 (away from 0)     | -1            | 
-| -0.5  | 0 (to even)       | 0               | 0 (away from 0)      | 0             | 
-| 0.5   | 0 (to even)       | 0               | 1 (away from 0)      | 0             |
-| 1.5   | 2 (to even)       | 1               | 2 (away from 0)      | 1             | 
-| 2.5   | 2 (to even)       | 2               | 3 (away from 0)      | 2             | 
-
-
----
-
-## Quick Reference
-
-| Language | Round Function        | Truncate Function | Halfway Example         |
-| -------- | --------------------- | ----------------- | ----------------------- |
-| Python   | `round(2.5) → 2`      | `int(2.5) → 2`    | ties to even (banker’s) |
-| Java     | `Math.round(2.5) → 3` | `(int)2.5 → 2`    | ties away from zero     |
-
----
-
-
-
-Would you like me to also update the **C++ section** to explicitly show `std::round` (modern approach) in addition to the older `(int)(x+0.5)` trick?
-```
