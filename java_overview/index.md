@@ -1,7 +1,7 @@
 # Intro to Java (with Python Comparisons)
 
 ## 📚 Contents
-
+0. [Java Installation](00_installation.md)
 1. [Hello World](01_helloworld.md)  
 2. [Using the Shell](02_shell.md)  
 3. [Java IDEs](03_IDE.md)  
