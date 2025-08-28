@@ -7,6 +7,9 @@ In-class example to demonstrate the **problem-solving process** and **limits of 
 
 Inspired by ["Car Talk Puzzler"](http://www.cartalk.com/content/hall-lights)  
 
+**Summary**
+The Hall of Lights puzzle works like this: imagine thousands of lights in a row, all initially turned off. The first person pulls every chain, turning them all on. The second person pulls every second chain, toggling only the even-numbered lights off. Then a third person toggles every third light, a fourth toggles every fourth, and so on, until the 20,000th person toggles only the last light. Each light’s final state depends on how many times it gets toggled, which equals the number of factors that light’s number has. Most numbers have factors in pairs, so their lights are toggled an even number of times and end up off. But the lights at positions that are perfect squares (like 1, 4, 9, 16, 25, etc.) have an odd number of factors, because their square root counts only once, and thus remain on at the end.
+
 ---
 
 ## Pseudocode
