@@ -1,6 +1,6 @@
 // lab2.java
 // your name
-// September 8, 2023
+// September 5, 2025
 // calculates primes using Sieve of Eratosthenes
 // demonstrates command line arguments and methods
 // *** add answers to performance questions here ***
