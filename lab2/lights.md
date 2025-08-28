@@ -1,13 +1,11 @@
 # CS 325 – In-Class Example  
 
-**lights.java – Fall 2019**  
+**lights.java – Fall 2019 (updated Fall 2025)**  
 Dr. Lehman  
 
 In-class example to demonstrate the **problem-solving process** and **limits of computing**.  
 
-Inspired by:  
-- ["Car Talk Puzzler"](http://www.cartalk.com/content/hall-lights)  
-- [LiveCode mailing list discussion](http://lists.runrev.com/pipermail/use-livecode/2005-November/070716.html)  
+Inspired by ["Car Talk Puzzler"](http://www.cartalk.com/content/hall-lights)  
 
 ---
 
