@@ -15,21 +15,30 @@ Inspired by:
 
 ```C
 
-get N
+get N from command line
 
 create boolean array of size N+1 to simplify referring to indexes
 (index 0 not used)
 
 set all values in array to false
 
-For a = 1 to N step 1   (includes N, i.e. <= N)
-For b = a to N step a
-if array\[b] is true, set false
-else set true
+for a = 1 to N step 1   (includes N, i.e. <= N)
+{
+   for b = a to N step a
+   {
+     if array[b] is true
+     {
+         set false
+     }
+     else
+     {
+         set true
+     }
 
-For x = 1 to N step 1
-If array\[x] is true, then display x
-
+for x = 1 to N step 1
+{
+     if array[x] is true, then display x
+}
 ````
 
 ---
