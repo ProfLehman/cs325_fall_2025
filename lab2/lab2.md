@@ -1,5 +1,5 @@
 # CS325 Data Structures  
-## Lab #2 – 25 points - Due Friday, September 8th at 5:00 pm
+## Lab #2 – 25 points - Due Friday, September 5th at 5:00 pm
 
 ---
 
