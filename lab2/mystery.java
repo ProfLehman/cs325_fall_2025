@@ -11,7 +11,7 @@ In groups ...
 2. Covert code to Java
 
 3. Run from command line
-    javac myster.java
+    javac mystery.java
     java mystery 2468
 
     or
