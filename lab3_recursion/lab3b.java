@@ -1,10 +1,10 @@
-// floodFill.java
-// fall 2023 (updated fall 2025)
+// lab3b.java
+// fall 2025
 // Prof. Lehman
 // Demonstrates recursive algorithm to "flood fill"
 // an ASCII graphic
 
-class Main {
+class lab3b {
     public static void main(String[] args) {
 
         // grid represents a graphic image
@@ -17,14 +17,17 @@ class Main {
                 { 'g', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'g' },
                 { 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g' } };
 
+        // show starting grid
         display(grid);
 
-        floodFill(grid, 5, 3, 'r', 'g'); // fill with r
+        // fill open space ' ' with 'r'
+        floodFill(grid, 5, 3, 'r', 'g');
         display(grid);
 
-        // floodFill(grid, 5, 3, ' ', 'g'); // fill back with space
-        // display(grid);
-    }
+        // fill same space with 'b'
+        floodFill(grid, 5, 3, 'b', 'g');
+        display(grid);
+    } // main
 
     // flood fill 2D char array
     public static void floodFill(char temp[][], int row, int col, char fillColor, char borderColor) {
@@ -43,7 +46,7 @@ class Main {
 
         }
 
-    }
+    } // floodFill
 
     // display array
     public static void display(char temp[][]) {
@@ -54,6 +57,6 @@ class Main {
             System.out.println();
         }
         System.out.println();
-    }
+    } // display
 
-}
+} // class
