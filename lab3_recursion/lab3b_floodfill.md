@@ -1,82 +1,144 @@
-# Lab #3 Part A - Power and SQRT
+# Lab #3 Part B - Flood Fill
 - CS325 Data Structures  
-- 6 points
-- Due **Tuesday**, September 9th at 5:00 pm
+- 9 points
+- Due **Wednesday**, September 10th at 5:00 pm
 
 ---
 
 ## Purpose
 
-The purpose of this assignment is to begin to think **recursively**. 
-Recursived functions are provided to calculate powers ie. 2^3 and also
-to calculate greatest common denominators.
-
-`power`(x,y) = {1 if y=0; x if y = 1; x*`power`(x,y-1) if y > 1}
-
-`gcd`(x,y) = {x if y=0; `gcd`(y, x%y) if y != 0}
-
+The purpose of this assignment is to understand a **recursive** algorithm that
+implements the floodfill.
 
 ---
 
 ## Requirements
-1. Modify lab3a.java to add two additional function calls to the `power` function.
-2. Create a `hand trace` **on paper** for each the the three function calls to power.
-3. Modify lab3a.java to add two additional function calls to the `gcd` function.
-4. Create a `hand trace`" **on paper** for each the the three function calls to gcd.
+0. Add your first and last names to the comments
+1. Modify `lab3b.java` to make recursive calls to **fill up and down, as well as diagonally**.
+2. Modify `lab3b.java` to add a **base case** that stops if the row or column is out of bounds. 
+    - Hint: row <0, col < 0, row >= temp.length, or col >= temp[0].length
+3. Demonstrate filling within border
+    - add function call to fill, then display board
+
+
+
+4. Demonstrate filling the border
+    - add function call to fill the border, then display board
 
 ---
+## Sample Output
+
+```text
+Original
+
+ggggggggg
+gg gg   g
+gg    g g
+g       g
+g    g  g
+g    g  g
+g       g
+ggggggggg
+
+
+After flood fill with r
+
+ggggggggg
+ggrggrrrg
+ggrrrrgrg
+grrrrrrrg
+grrrrgrrg
+grrrrgrrg
+grrrrrrrg
+ggggggggg
+
+
+After flood filling border with i
+
+iiiiiiiii
+iiriirrri
+iirrrrgri
+irrrrrrri
+irrrrgrri
+irrrrgrri
+irrrrrrri
+iiiiiiiii
+
+```
 
 
 ## Starter Code
 
 ```java
-// lab3a.java
-// lehman
+// lab3b.java
 // fall 2025
-// power and GCD recursive functions
-//
-public class Main {
+// Prof. Lehman
+// Demonstrates recursive algorithm to "flood fill"
+// an ASCII graphic
+
+class lab3b {
     public static void main(String[] args) {
 
-        // call to power function
-        System.out.println(power(2, 3));
+        // grid represents a graphic image
+        char grid[][] = { { 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g' },
+                { 'g', 'g', ' ', 'g', 'g', ' ', ' ', ' ', 'g' },
+                { 'g', 'g', ' ', ' ', ' ', ' ', 'g', ' ', 'g' },
+                { 'g', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'g' },
+                { 'g', ' ', ' ', ' ', ' ', 'g', ' ', ' ', 'g' },
+                { 'g', ' ', ' ', ' ', ' ', 'g', ' ', ' ', 'g' },
+                { 'g', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'g' },
+                { 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g', 'g' } };
+
+        // show starting grid
+        display(grid);
+
+        // fill open space ' ' with 'r'
+        floodFill(grid, 5, 3, 'r', 'g');
+        display(grid);
+
+        // fill same space with 'b'
+        floodFill(grid, 5, 3, 'b', 'g');
+        display(grid);
+    } // main
+
+    // flood fill 2D char array
+    public static void floodFill(char temp[][], int row, int col, char fillColor, char borderColor) {
+
+        // base case is when position is already filled or hit border
+        if (temp[row][col] != fillColor && temp[row][col] != borderColor) {
+
+            // set current to fill color
+            temp[row][col] = fillColor;
+
+            // recursive calls to fill
+            floodFill(temp, row, col - 1, fillColor, borderColor); // fill left
+            floodFill(temp, row, col + 1, fillColor, borderColor); // fill right
+
+            floodFill(temp, row + 1, col, fillColor, borderColor); // fill down
+
+        }
+
+    } // floodFill
+
+    // display array
+    public static void display(char temp[][]) {
+        for (int r = 0; r < temp.length; r++) {
+            for (int c = 0; c < temp[r].length; c++) {
+                System.out.print(temp[r][c]);
+            }
+            System.out.println();
+        }
         System.out.println();
+    } // display
 
-        
-        // call to gcd function
-        System.out.println(gcd(10, 45));
-        System.out.println();
-
-    }
-
-    public static int power(int x, int y) {
-        System.out.println("power(" + x + "," + y + ")");
-        if (y == 0)
-            return 1;
-        else if (y == 1)
-            return x;
-        else
-            return x * power(x, y - 1);
-    }
-
-    public static int gcd(int x, int y) {
-        System.out.println("gcd(" + x + "," + y + ")");
-        if (y == 0)
-            return x;
-        else
-            return gcd(y, x % y);
-    }
-
-}
+} // class
 ```
 
 ---
 ## Submitting your assignment
 
-Your program must be called **lab3a.java**
+Your program must be called **lab3b.java**
 
-Host `lab3a.java` on your GitHub account and **upload a link to your code in Moodle**
-
-Submit your *paper hand traces* to Prof. Lehman (in class, or outside office S182)
+Host `lab3b.java` on your GitHub account and **upload a link to your code in Moodle**
 
 -- end --
