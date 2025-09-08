@@ -81,9 +81,9 @@ public class towers {
 			double mps = count / totalSeconds;
 			
 			System.out.println();
-			System.out.println( count + " moves" );
-			System.out.println("numbr of disks = " + d + ", time = " + totalSeconds + " seconds");
-			System.out.printf( "%.0f moves per second", mps );
+            System.out.printf( "count %,d moves, ", count );
+            System.out.println("numbr of disks = " + d + ", time = " + totalSeconds + " seconds");
+            System.out.printf( "%,.0f moves per second", mps );
 			System.out.println();	
 			
 	}
