@@ -13,7 +13,7 @@ public class FactorialLong {
 
     public static void main(String[] args) {
         for (int x = 1; x <= 25; x++)
-            System.out.println(x + " : " + fact2(x));
+            System.out.printf("%d : %,d\n", x, fact2(x));
     }
 }
 ```
