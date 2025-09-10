@@ -14,15 +14,19 @@ implements the floodfill.
 
 ## Requirements
 0. Add your first and last names to the comments
-1. Modify `lab3b.java` to make recursive calls to **fill up and down, as well as diagonally**.
-   - Hint: you will have x8 recursive calls
-3. Modify `lab3b.java` to add a **base case** that stops if the row or column is out of bounds. 
+
+1. Modify `lab3b.java` to add a **base case** that stops if the row or column is out of bounds. 
     - Hint: row <0, col < 0, row >= temp.length, or col >= temp[0].length
     - Hint: another way to look at the problem is to only continue if row >= 0 and row < temp.length and col >= 0 and col < temp[0].length
-4. Demonstrate filling within border
+
+2. Modify `lab3b.java` to make recursive calls to **fill up and down, as well as diagonally**.
+   - Hint: you will have x8 recursive calls
+
+3. Demonstrate filling within border
     - add function call to fill, then display board
     - Hint: see sample output
-5. Demonstrate filling the border
+
+4. Demonstrate filling the border
     - add function call to fill the border, then display board
 
 ---
