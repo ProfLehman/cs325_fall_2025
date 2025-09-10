@@ -24,9 +24,5 @@ This collection demonstrates classic recursive functions in Java. Each page incl
 - [Array Average (with helper)](ArrayAverage.md)  
 
 ### recursion3.java
-- [CourseWork (hours recursion)](CourseWork.md)  
-- [Array Total (with helper)](ArrayTotal.md)  
-- [Count Greater Than N (with helper)](ArrayGreaterThan.md)  
-- [Array Average (with helper)](ArrayAverage.md)  
 - [Count Vowels (substring approach)](CountVowelsOne.md)  
 - [Count Vowels (index approach)](CountVowelsTwo.md) 
