@@ -1,6 +1,6 @@
 # Factorial (int)
 
-This recursive function calculates factorial using an `int`. It multiplies the number by the factorial of one less until the base case of 0 or 1. Since `int` has limited range, results overflow after around 12!
+This recursive function calculates factorial using an `int`. It multiplies the number by the factorial of one less until the base case of 0 or 1. Since `int` has limited range, results overflow after around 17!
 
 ```java
 public class FactorialInt {
