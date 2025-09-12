@@ -1,3 +1,32 @@
+## Stack Example
+
+## UML Class Diagram
+
+```mermaid
+classDiagram
+class StackCharArray {
+  %% Fields
+  -char[] data
+  -int top
+  -int MAX
+  -int size
+
+  %% Constructors
+  +StackCharArray()
+  +StackCharArray(int m)
+
+  %% Methods
+  +void push(char v)
+  +char top()
+  +void pop()
+  +boolean empty()
+  +boolean full()
+  +int size()
+}
+
+```
+
+
 ## Stack class
 
 ```java
