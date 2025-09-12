@@ -12,6 +12,8 @@ that can slide onto any rod. The objective is to move the entire stack of disks 
 following three simple rules: only one disk can be moved at a time, each move consists of taking the top disk from 
 one rod and placing it on another rod, and no disk may be placed on top of a smaller disk.
 
+You can play the Towers of Hanoi [online](https://www.mathsisfun.com/games/towerofhanoi.html).
+
 The Towers of Hanoi problem is a classic puzzle that can be “solved” using **recursion**. A recursive solution
 which determines the total number of moves is included below `towers.java`.
 
