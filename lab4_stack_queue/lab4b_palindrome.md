@@ -7,14 +7,14 @@
 
 ## Purpose
 
-The purpose of this assignment is to use the `StackCharArray` and `QueueuCharArray` classes to determine 
+The purpose of this assignment is to use the `StackCharArray` and `QueueCharArray` classes to determine 
 if a word is a palindrome. A palindrome is a word that is spelled the same forward and backward.
 
 ---
 
 ## Requirements
-1. Implement the palindrome method using the `StackCharArray` and `QueueuCharArray` classes. 
-2. Modify the `palindrome.java` code below implmenting the `palindrome` method. Feel free to add additional test cases.
+1. Implement the palindrome method using the `StackCharArray` and `QueueCharArray` classes. 
+2. Modify the `palindrome.java` code below, implementing the `palindrome` method. Feel free to add additional test cases.
 3. You must use the following algorithm shown in pseudocode. 
 
 ## Palindrome Algorithm (Pseudocode)
@@ -22,10 +22,10 @@ if a word is a palindrome. A palindrome is a word that is spelled the same forwa
 Assume palindrome status is true
 Create stack
 Create queue
-Add all letters from word to stack
-Add all letters from word to queue
+Add all letters from the word to the stack
+Add all letters from the word to the queue
 
-While stack is not empty and palindrome status is true
+While the stack is not empty and the palindrome status is true
    if stack.top() not equal to queue.front()
       palindrome status is false
    else
@@ -39,8 +39,8 @@ flowchart TD
     A["Start"] --> B["Set palindromeStatus = true"]
     B --> C["Create stack"]
     C --> D["Create queue"]
-    D --> E["Add all letters from word to stack"]
-    E --> F["Add all letters from word to queue"]
+    D --> E["Add all letters from word<br>to stack"]
+    E --> F["Add all letters from word<br>to queue"]
     F --> G{"WHILE <br>Stack not empty<br>AND<br>palindromeStatus,<br>true?"}
     G --> L["Return Status"]
     G --YES--> H{"IF last equal first"}
