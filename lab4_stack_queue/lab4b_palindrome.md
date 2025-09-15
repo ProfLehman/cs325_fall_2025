@@ -20,6 +20,7 @@ if a word is a palindrome. A palindrome is a word that is spelled the same forwa
 ## Palindrome Algorithm (Pseudocode)
 ```bash
 Assume palindrome status is true
+
 Create stack
 Create queue
 Add all letters from the word to the stack
@@ -52,7 +53,7 @@ flowchart TD
 ```
 ---
 
-## Starter Code for QueueCharArray
+## Starter Code for palindrome
 
 `palindrome.java` stores the code to define the class.
 
