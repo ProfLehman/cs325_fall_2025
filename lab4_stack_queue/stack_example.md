@@ -138,6 +138,7 @@ public class StackCharArray {
 ## test code
 
 ```
+java
 //testStack.java
 //dr. lehman
 //fall 2025
