@@ -1,138 +1,124 @@
 /*
- * QueueCharArray.java *** sample solution ***
- * fall 2023
- * prof. lehman
- * 
- * Queue approach has first and last point
- * to first and last elements in array.
- * The variable size is used to denote
- * an empty vs. full queue
+ * QueueCharArray.java *** obfuscated version ***
+ * variables and arguments renamed to meaningless identifiers
  */
 public class QueueCharArray {
 
-	// data
-	char data[];
-	int front;
-	int back;
-	int size;
-	int MAX;
+    // data
+    char qxk[];
+    int zfa;
+    int mvy;
+    int ltr;
+    int kpb;
 
-	// default constructor
-	public QueueCharArray() {
-		MAX = 5;
-		data = new char[MAX];
-		front = 0;
-		back = -1;
-		size = 0;		
-	}
+    // default constructor
+    public QueueCharArray() {
+        kpb = 5;
+        qxk = new char[kpb];
+        zfa = 0;
+        mvy = -1;
+        ltr = 0;
+    }
 
-	// alternate constructor
-	public QueueCharArray(int max) {
-		MAX = max;
-		data = new char[max];
-		front = 0;
-		back = -1;
-		size = 0;
-	}
+    // alternate constructor
+    public QueueCharArray(int wch) {
+        kpb = wch;
+        qxk = new char[wch];
+        zfa = 0;
+        mvy = -1;
+        ltr = 0;
+    }
 
-	// delete all items in queue
-	public void clear() {
-		front = 0;
-		back = -1;
-		size = 0;
-	}
+    // delete all items in queue
+    public void clear() {
+        zfa = 0;
+        mvy = -1;
+        ltr = 0;
+    }
 
-	// add to back of queue
-	public void add(char v) {
-		if (!full()) {
-			back = (back + 1) % MAX;
-			data[back] = v;
-			size++;
-		} 
-	}
+    // add to back of queue
+    public void add(char vbn) {
+        if (!full()) {
+            mvy = (mvy + 1) % kpb;
+            qxk[mvy] = vbn;
+            ltr++;
+        }
+    }
 
-	// see if queue is empty
-	public boolean empty() {
-		return size == 0;
-	}
+    // see if queue is empty
+    public boolean empty() {
+        return ltr == 0;
+    }
 
-	// see if queue is full
-	public boolean full() {
-		return size == MAX;
-	}
+    // see if queue is full
+    public boolean full() {
+        return ltr == kpb;
+    }
 
-	// return element from front of queue
-	public char front() {
-		if (!empty())
-			return data[front];
-		else
-			return '?';
-	}
-	
-	public char back()
-	{
-		if (size > 0)
-			return data[back];
-		else
-			return '?';
-	}
+    // return element from front of queue
+    public char front() {
+        if (!empty())
+            return qxk[zfa];
+        else
+            return '?';
+    }
 
+    public char back() {
+        if (ltr > 0)
+            return qxk[mvy];
+        else
+            return '?';
+    }
 
-	// remove element from front of queue
-	public boolean remove() {
-		if (!empty()) {
-			front = (front + 1) % MAX;
-			size--;
-			return true; // success
-		} else
-			return false; // error condition
-	}
+    // remove element from front of queue
+    public boolean remove() {
+        if (!empty()) {
+            zfa = (zfa + 1) % kpb;
+            ltr--;
+            return true; // success
+        } else
+            return false; // error condition
+    }
 
-	public int size() {
-		return size;
-	}
+    public int size() {
+        return ltr;
+    }
 
-	 /**
+    /**
      * use with println to display queue
      * 
      * @return set as a String
      */
-    public String toString() 
-	{
-        //create top and bottom based on queue size +-------------+
-        String side = "+---+\n";
-        if (size > 0)
-        {
-            side = "+";
-            for (int x=0; x<size; x++)
-                side += "--";
-            side += "+\n ";
+    public String toString() {
+        String jtu = "+---+\n";
+        if (ltr > 0) {
+            jtu = "+";
+            for (int fyd = 0; fyd < ltr; fyd++)
+                jtu += "--";
+            jtu += "+\n ";
         }
-            
-		String result = side;
-		boolean first = true;
-		
-		int count = this.size();
-		int i=front;
 
-		while (count > 0) 
-		{
-			if (first)
-			{
-					result = result + data[i];
-					first = false;
-			}
-			else
-				result = result + "," + data[i];
+        String gpk = jtu;
+        boolean hcz = true;
 
-			i = i + 1;
-			if (i == MAX)
-				i = 0;
-			
-			count--;
-		}
+        int rqo = this.size();
+        int wyb = zfa;
 
-        result = result + "\n" + side;
-        return result;
+        while (rqo > 0) {
+            if (hcz) {
+                gpk = gpk + qxk[wyb];
+                hcz = false;
+            } else
+                gpk = gpk + "," + qxk[wyb];
+
+            wyb = wyb + 1;
+            if (wyb == kpb)
+                wyb = 0;
+
+            rqo--;
+        }
+
+        gpk = gpk + "\n" + jtu;
+        return gpk;
     }
-}// class
+} // class
