@@ -1,71 +1,77 @@
 /*
- * QueueCharArray.java *** obfuscated version ***
- * variables and arguments renamed to meaningless identifiers
+ * QueueCharArray.java *** sample solution ***
+ * fall 2025
+ * prof. lehman
+ * 
+ * Queue approach has first and last point
+ * to first and last elements in array.
+ * The variable size is used to denote
+ * an empty vs. full queue
  */
 public class QueueCharArray {
 
     // data
-    char qxk[];
-    int zfa;
-    int mvy;
-    int ltr;
-    int kpb;
+    char data[];
+    int front;
+    int back;
+    int size;
+    int MAX;
 
     // default constructor
     public QueueCharArray() {
-        kpb = 5;
-        qxk = new char[kpb];
-        zfa = 0;
-        mvy = -1;
-        ltr = 0;
+        MAX = 5;
+        data = new char[MAX];
+        front = 0;
+        back = -1;
+        size = 0;
     }
 
     // alternate constructor
-    public QueueCharArray(int wch) {
-        kpb = wch;
-        qxk = new char[wch];
-        zfa = 0;
-        mvy = -1;
-        ltr = 0;
+    public QueueCharArray(int max) {
+        MAX = max;
+        data = new char[max];
+        front = 0;
+        back = -1;
+        size = 0;
     }
 
     // delete all items in queue
     public void clear() {
-        zfa = 0;
-        mvy = -1;
-        ltr = 0;
+        front = 0;
+        back = -1;
+        size = 0;
     }
 
     // add to back of queue
-    public void add(char vbn) {
+    public void add(char v) {
         if (!full()) {
-            mvy = (mvy + 1) % kpb;
-            qxk[mvy] = vbn;
-            ltr++;
+            back = (back + 1) % MAX;
+            data[back] = v;
+            size++;
         }
     }
 
     // see if queue is empty
     public boolean empty() {
-        return ltr == 0;
+        return size == 0;
     }
 
     // see if queue is full
     public boolean full() {
-        return ltr == kpb;
+        return size == MAX;
     }
 
     // return element from front of queue
     public char front() {
         if (!empty())
-            return qxk[zfa];
+            return data[front];
         else
             return '?';
     }
 
     public char back() {
-        if (ltr > 0)
-            return qxk[mvy];
+        if (size > 0)
+            return data[back];
         else
             return '?';
     }
@@ -73,52 +79,50 @@ public class QueueCharArray {
     // remove element from front of queue
     public boolean remove() {
         if (!empty()) {
-            zfa = (zfa + 1) % kpb;
-            ltr--;
+            front = (front + 1) % MAX;
+            size--;
             return true; // success
         } else
             return false; // error condition
     }
 
+    // return size
     public int size() {
-        return ltr;
+        return size;
     }
 
-    /**
-     * use with println to display queue
-     * 
-     * @return set as a String
-     */
+    // display queue with ASCII version
     public String toString() {
-        String jtu = "+---+\n";
-        if (ltr > 0) {
-            jtu = "+";
-            for (int fyd = 0; fyd < ltr; fyd++)
-                jtu += "--";
-            jtu += "+\n ";
+        // create top and bottom based on queue size +-------------+
+        String side = "+---+\n";
+        if (size > 0) {
+            side = "+";
+            for (int x = 0; x < size; x++)
+                side += "--";
+            side += "+\n ";
         }
 
-        String gpk = jtu;
-        boolean hcz = true;
+        String result = side;
+        boolean first = true;
 
-        int rqo = this.size();
-        int wyb = zfa;
+        int count = this.size();
+        int i = front;
 
-        while (rqo > 0) {
-            if (hcz) {
-                gpk = gpk + qxk[wyb];
-                hcz = false;
+        while (count > 0) {
+            if (first) {
+                result = result + data[i];
+                first = false;
             } else
-                gpk = gpk + "," + qxk[wyb];
+                result = result + "," + data[i];
+            i = i + 1;
+            if (i == MAX)
+                i = 0;
 
-            wyb = wyb + 1;
-            if (wyb == kpb)
-                wyb = 0;
-
-            rqo--;
+            count--;
         }
 
-        gpk = gpk + "\n" + jtu;
-        return gpk;
+        result = result + "\n" + side;
+        return result;
     }
-} // class
+
+}// class
