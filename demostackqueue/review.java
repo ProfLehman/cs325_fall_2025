@@ -26,6 +26,7 @@ public class review {
         System.out.println(alice);
 
         System.out.println(alice.getYears());
+
         System.out.println();
 
         // #2 - test recursive function f with two arguments
@@ -104,6 +105,7 @@ public class review {
     // sample recursive function
     public static int f(int a, int b) {
         System.out.println("f: " + a + " " + b); // use for debug only
+
         if (a % 2 != 0)
             return f(a - 1, b);
         else if (b % 2 != 0)
@@ -119,8 +121,10 @@ public class review {
         System.out.println("f: " + a + " " + b + " " + c);// use for debug only
         if (a > b)
             f(b, a, c);
+
         else if (b > c)
             f(a, c, b);
+
         else
             System.out.println(a + ", " + b + ", " + c); // base case
     }
