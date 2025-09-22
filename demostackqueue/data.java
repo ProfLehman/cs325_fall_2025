@@ -18,7 +18,7 @@ public class data {
         years = 0;
     }
 
-    // default constructor
+    // alternate constructor
     // data y = new data(true, 17);
     public data(boolean status, int num) {
         found = status;
