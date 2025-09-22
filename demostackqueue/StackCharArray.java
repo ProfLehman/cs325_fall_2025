@@ -6,13 +6,13 @@
 
 public class StackCharArray {
 
-	//data
+	// data
 	private char data[];
 	private int top;
 	private int MAX;
 	private int size;
-	
-	//methods
+
+	// methods
 
 	/**
 	 * create empty stack with max size 5
@@ -23,7 +23,7 @@ public class StackCharArray {
 		top = data.length;
 		size = 0;
 	}
-	
+
 	/**
 	 * create stack with max size m
 	 * 
@@ -35,7 +35,7 @@ public class StackCharArray {
 		top = data.length;
 		size = 0;
 	}
-	
+
 	/**
 	 * add char to stack
 	 * 
@@ -48,14 +48,14 @@ public class StackCharArray {
 			size++;
 		}
 	}
-	
+
 	/**
-	 * returns last item added to stack (does not remove item) 
+	 * returns last item added to stack (does not remove item)
 	 * or '?' if stack is empty
 	 * 
 	 * @return top item or '?' if empty
 	 */
-	public char top() {	
+	public char top() {
 		if (!empty())
 			return data[top];
 		else
@@ -66,12 +66,12 @@ public class StackCharArray {
 	 * remove last item added to stack
 	 */
 	public void pop() {
-		if (!empty()){
+		if (!empty()) {
 			top++;
 			size--;
-		}		
+		}
 	}
-	
+
 	/**
 	 * returns empty if not items on status
 	 * 
@@ -80,7 +80,7 @@ public class StackCharArray {
 	public boolean empty() {
 		return top == MAX;
 	}
-	
+
 	/**
 	 * returns true if size equals max
 	 * 
@@ -89,27 +89,24 @@ public class StackCharArray {
 	public boolean full() {
 		return top == 0;
 	}
-	
+
 	/**
 	 * returns number of items stored in stack
 	 * 
 	 * @return number of items stored in stack
 	 */
-	public int size() 
-	{
+	public int size() {
 		return size;
 	}
-	
-	public String toString() 
-	{
+
+	public String toString() {
 		String result = "+   +\n";
 		int cur = this.top;
-		for (int x=0; x< this.size(); x++ )
-		{
+		for (int x = 0; x < this.size(); x++) {
 			result = result + "| " + this.data[cur] + " |\n";
 			cur++;
 		}
-		result = result + "+---+\n";
+		result = result + "+---+";
 		return result;
 	}
-}//class
+}// class
