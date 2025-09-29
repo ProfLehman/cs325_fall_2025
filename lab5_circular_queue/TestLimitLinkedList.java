@@ -19,6 +19,13 @@ public class TestLimitLinkedList {
 
     public static void main(String[] args) {
 
+        /*
+         * test array allocation
+         * int test[] = new int[2000000000];
+         * test[0] = 9;
+         * printHeapUsage();
+         */
+
         int maxValue = 1000000000;
 
         Random rand = new Random();
