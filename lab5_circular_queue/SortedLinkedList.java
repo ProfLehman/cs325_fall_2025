@@ -1,14 +1,14 @@
 class SortedLinkedList {
-    private Node head;
+    private Node2 head;
 
     public void insert(int value) {
-        Node newNode = new Node(value);
+        Node2 newNode = new Node2(value);
         if (head == null || value < head.data) {
             newNode.next = head;
             head = newNode;
             return;
         }
-        Node current = head;
+        Node2 current = head;
         while (current.next != null && current.next.data < value) {
             current = current.next;
         }
@@ -17,7 +17,7 @@ class SortedLinkedList {
     }
 
     public void print() {
-        Node current = head;
+        Node2 current = head;
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;
