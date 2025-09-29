@@ -81,7 +81,7 @@ public class CircularCharQueue {
     }
 
     // *** add code for lab5 **
-    // simpulate "spinning" the queue so that
+    // simulate "spinning" the queue so that
     // queue rotates a random number of times
     public void spin() {
 

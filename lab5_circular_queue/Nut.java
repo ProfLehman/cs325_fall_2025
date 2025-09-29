@@ -8,11 +8,11 @@
 */
 public class Nut {
 
-    public CircularQueue data;
+    public CircularCharQueue data;
 
     // default constructor
     public Nut(char a, char b, char c, char d, char e, char f) {
-        data = new CircularQueue();
+        data = new CircularCharQueue();
         data.enqueue(a);
         data.enqueue(b);
         data.enqueue(c);
