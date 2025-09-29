@@ -1,4 +1,13 @@
+// SortedArrayList.java
+// fall 2025
+// prof. lehman
+//
+// demonstrates sorted list 
+// using int array
+//
 class SortedArrayList {
+
+    // data
     private int[] arr;
     private int size;
 
@@ -8,19 +17,25 @@ class SortedArrayList {
     }
 
     public void insert(int value) {
-        if (size >= arr.length) throw new RuntimeException("Array full");
+
+        // start index i at the end of the array
         int i = size - 1;
-        // Shift elements to find correct position
+
+        // shift elements right to find correct position
         while (i >= 0 && arr[i] > value) {
             arr[i + 1] = arr[i];
             i--;
         }
+
+        // set the new value and adjust size
         arr[i + 1] = value;
         size++;
     }
 
-    public void print() {
-        for (int i = 0; i < size; i++) System.out.print(arr[i] + " ");
-        System.out.println();
+    public String toString() {
+        String result = "";
+        for (int i = 0; i < size; i++)
+            result += arr[i] + " ";
+        return result;
     }
 }

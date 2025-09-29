@@ -5,9 +5,10 @@
 	
 	Demonstrates basic data node for linked-list structures
 	
+    Stores int data
 */
 public class Node2 {
-;
+    ;
     public int data;
     public Node2 next;
 
