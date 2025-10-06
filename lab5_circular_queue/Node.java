@@ -24,4 +24,10 @@ public class Node {
         next = n;
     }
 
+    // alternate constructor
+    public Node(char value) {
+        data = value;
+        next = null;
+    }
+
 }
