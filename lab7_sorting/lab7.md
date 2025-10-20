@@ -17,7 +17,7 @@ Show how each of the algorithms **Bubble**, **Selection**, and **Insertion** sor
 Show how each of the algorithms Bubble, Selection, and Insertion sort would sort the data chosen in step 1 if the data were already sorted in ascending order ie. 10 20 30 40 60 70. Show each pass in the algorithm and clearly indicate all “swaps”.  Each algorithm requires N-1 passes. Count and show the total number of swaps and comparisons required to sort your data.
 
 
-### Clearly label each sort.  Use 8.5  x 11 inch paper, no zuzzy edges. Submit paper copies of your sorts. You should have a total of six pages.
+### Clearly label each sort.  Use 8.5  x 11 inch paper, no fuzzy edges. Submit paper copies of your sorts. You should have a total of six pages.
 
 Note: You may choose to code these algorithms for fun :-) or to check your answers, but are not required to write code for this assignment. 
 You can also find algorithms online, including the Geeks for Geeks site as well as Prof. Lehman’s sortDemo program posted on Moodle.
