@@ -169,16 +169,11 @@ public class sortDemo {
      */
     private void selectionSort() {
 
-        numC++;
         for (int i = 0; i < size - 1; i++) {
-            numC++;
 
             // find the next smallest value
             int minIndex = i;
-            numC++;
             for (int j = i + 1; j < size; j++) {
-                numC++;
-
                 numC++;
                 if (data[j] < data[minIndex])
                     minIndex = j;
@@ -189,7 +184,6 @@ public class sortDemo {
 
             // swap next smallest with item at i
             // if check prevents swap if item already in place
-            numC++;
             if (minIndex != i) {
                 int temp = data[minIndex];
                 data[minIndex] = data[i];
@@ -210,9 +204,7 @@ public class sortDemo {
 
     private void insertionSort() {
 
-        numC++;
         for (int i = 1; i < size; i++) {
-            numC++;
 
             // insert the next value
             int j = i;
@@ -221,15 +213,12 @@ public class sortDemo {
                 System.out.println("pass: " + (i - 1) + ", Inserting " + data[j]);
 
             numC++;
-            numC++;
             while (j > 0 && data[j] < data[j - 1]) {
-                numC++;
                 numC++;
 
                 if (showPass)
                     System.out.println("Swaping " + data[j] + " and " + data[j - 1]);
 
-                numC++;
                 // swap
                 int temp = data[j];
                 data[j] = data[j - 1];
@@ -253,15 +242,11 @@ public class sortDemo {
     private void bubbleSort() {
         boolean didSwap = false; // allows for optimization to stop once sorted
 
-        numC++;
         for (int x = 0; x < size - 1; x++) {
-            numC++;
 
             didSwap = false;
 
-            numC++;
             for (int y = 0; y < size - 1 - x; y++) {
-                numC++;
 
                 numC++;
                 if (data[y] > data[y + 1]) {
@@ -272,6 +257,7 @@ public class sortDemo {
                     numS++;
                     didSwap = true;
                 } // if
+
             } // for y
 
             if (showPass) {
@@ -280,7 +266,6 @@ public class sortDemo {
             }
 
             // you can increase efficiency by stopping if data is sorted ie. no swaps
-            numC++;
             if (didSwap == false)
                 x = size; // effectively breaks out out loop
         } // for x
@@ -403,7 +388,6 @@ public class sortDemo {
      * Sedgewick - quicksort - recursive quicksort helper
      */
     private void quickSortH(int low, int high) {
-        numC++;
         if (low < high) {
             int pivotLocation = partition(low, high);
             quickSortH(low, pivotLocation - 1);
@@ -434,12 +418,9 @@ public class sortDemo {
 
             // Increment i while data[i] < pivot value and i != high
             i++;
-            numC++;
+
             numC++;
             while (data[i] < pivotValue && !done) {
-                numC++;
-                numC++;
-
                 numC++;
                 if (i == high)
                     done = true;
@@ -454,11 +435,7 @@ public class sortDemo {
             // Decrement j while pivot value < data[j] and j != low
             j--;
             numC++;
-            numC++;
             while (data[j] >= pivotValue && !done) {
-                numC++;
-                numC++;
-
                 numC++;
                 if (j == low)
                     done = true;
@@ -475,7 +452,6 @@ public class sortDemo {
              * If there are zero or one items remaining, all numbers are partitioned. Return
              * j
              */
-            numC++;
             if (i >= j) {
                 done = true;
                 if (showPass) {
@@ -548,7 +524,6 @@ public class sortDemo {
             System.out.println();
         }
 
-        numC++;
         if (n > 1) {
 
             // get pivot value
@@ -563,10 +538,9 @@ public class sortDemo {
                 System.out.printf(" p = %d  j = %d  q = %d\n", p, j, q);
             }
 
-            numC++;
             while (j < q) {
-                numC++;
 
+                numC++;
                 if (data[j] < x) { // move to beginning of array
                     numC++;
                     // swap(a, j++, ++p);
@@ -584,7 +558,6 @@ public class sortDemo {
 
                 } else if (data[j] > x) {
                     numC++;
-                    numC++;
 
                     // swap(a, j, --q); // move to end of array
                     q--;
@@ -596,7 +569,6 @@ public class sortDemo {
                     numS++;
 
                 } else {
-                    numC++;
                     numC++;
                     if (showPass)
                         System.out.printf("Keeping = j:%d \n", data[j]);
