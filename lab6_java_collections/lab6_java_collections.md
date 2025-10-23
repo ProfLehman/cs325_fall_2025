@@ -1,7 +1,7 @@
 # Lab #6 Java Collections
 
 - CS325 Data Structures  
-- 30 points
+- 25 points
 - Due **Thursday**, October 16th at 5:00 pm (encouraged to complete before fall break)
 
 ---
