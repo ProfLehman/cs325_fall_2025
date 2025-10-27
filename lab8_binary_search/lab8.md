@@ -15,6 +15,32 @@ Feel free to be creative and modify the script as long as you meet the following
 - Must display the current guess number
 - Must stop if it determines that the user has entered an incorrect response
 
+## Pseudocode
+```
+// *** sample pseudocode for lab 8 ***
+get MAX
+
+set low = 1
+set high = MAX
+set found = false
+set guess count = 0
+
+while not found
+
+   guess = (low + high) / 2
+   add 1 to guess count
+
+   Ask if number this is your number?
+   if yes, then set found = true and print guess count
+   if no, then ask if your number is higher or lower
+      if your number is higher, then set low to guess + 1
+      if your number is lower, then set high to guess – 1
+
+end loop
+
+display found number in guess count guesses
+```
+
 ## Sample Run
 ```
 CS325 AI Bot Guessing Game …
