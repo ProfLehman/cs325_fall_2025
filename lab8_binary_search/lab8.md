@@ -1,8 +1,7 @@
-# CS 325 Data Structures
-## Lab 8 – Guessing Game Binary Search - 25 Points
-## Due Monday, November 3 5:00 pm.
+## CS 325 Data Structures - Lab 8 – Guessing Game Binary Search - 25 Points
+## Due Monday, November 3, 5:00 pm.
 
-# Requirrements
+# Requirements
 Create an AI bot that will play the “guess my number” game. The game works by having the bot first ask
 for the largest number (ie. an upper limit). The user is then asked to pick a random number. The bot must
 reply they it can guess the number in X guesses. The bot proceeds to make guesses with the user replying
