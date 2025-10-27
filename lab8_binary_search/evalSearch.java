@@ -1,17 +1,18 @@
 
 // evalSearch.java (updated evalSearchF08.cpp)
-//j.l. lehman
-//fall 2017, modified fall 2019, fall 2021
+// j.l. lehman
+// fall 2017, modified fall 2019, fall 2021
+// fall 2025 - updated Bentley to handle up to 200,000,000 items
 //
-//sequential
-//binary search - recursive
-//binary search - while loop
-//binary search - Jon Bently (removes recursion and loop)
+// sequential
+// binary search - recursive
+// binary search - while loop
+// binary search - Jon Bently (removes recursion and loop)
 //
-//Note: array size for searching is always 1048576
+// Note: array size for searching is always 268,435,456
 //
-//Program varies the number of searches to demonstrate the time differences for using
-//each search approach.
+// Program varies the number of searches to demonstrate the time differences for using
+// each search approach.
 //
 
 import java.util.GregorianCalendar;
@@ -82,8 +83,26 @@ public class evalSearch {
 	public static int binarySearchIf(int first, int last, int item, int a[]) {
 		int L = 0;
 
-		if (a[524288] < item)
-			L = 524288;
+//		if (a[L + 268435456] < item)     
+//			L = L + 268435456;
+		if (a[L + 134217728] < item)     
+			L = L + 134217728;
+		if (a[L + 67108864] < item)     
+			L = L + 67108864;
+		if (a[L + 33554432] < item)     
+			L = L + 33554432;
+		if (a[L + 16777216] < item)     
+			L = L + 16777216;
+		if (a[L + 8388608] < item)     
+			L = L + 8388608;
+		if (a[L + 4194304] < item)     
+			L = L + 4194304;
+		if (a[L + 2097152] < item)     
+			L = L + 2097152;
+		if (a[L + 1048576] < item)
+			L = L + 1048576;
+		if (a[L + 524288] < item)
+			L = L + 524288;
 		if (a[L + 262144] < item)
 			L = L + 262144;
 		if (a[L + 131072] < item)
@@ -102,7 +121,6 @@ public class evalSearch {
 			L = L + 2048;
 		if (a[L + 1024] < item)
 			L = L + 1024;
-
 		if (a[L + 512] < item)
 			L = L + 512;
 		if (a[L + 256] < item)
@@ -132,7 +150,7 @@ public class evalSearch {
 		else
 			P = L + 1;
 
-		if (P > 1048575 || a[P] != item) // not found
+		if (P > 268435456 || a[P] != item) // not found
 			P = -1;
 
 		return P;
@@ -141,7 +159,7 @@ public class evalSearch {
 	public static void main(String[] args) {
 		
 		// fill array with even numbers 0,2,4, 6...
-		int n = 1048576; //max value for Bently search
+		int n = 268435456 + 1; //max value for Bently search
 		int data[] = new int[n];
 		int num = 0;
 
@@ -157,9 +175,15 @@ public class evalSearch {
 		//      need to disable sequential search for higher values
 		//      for 2021, used 500,000 to show 23 seconds for sequential search
 		
-		int numSearches =200000000; //*** disable sequential search for this number
-		//int numSearches =500000;
+		//Note: for 2025, used 200,000,000 to show 12 seconds, 17 seconds, 6 seconds for binary searches (i7, 11th gen, 16GB RAM)
+		//      ** not sure why slower with newer chip, but system appears to to have other performance issues
+		//
+		//      need to disable sequential search for higher values
+		//      for 2025, used 500,000 to show 16 seconds for sequential search
 		
+		int numSearches = 268435456; //*** disable sequential search for this number
+		//int numSearches = 500000;
+
 		
 		int numFound = 0;
 		int numNotFound = 0;
@@ -205,12 +229,8 @@ public class evalSearch {
 				else
 					numFound++;
 
-				s += 1;
+				s++;
 
-				// wrap search values so that 1/2 found, 1/2 not found
-				if (s > 2097151) {
-					s = 0;
-				}
 			}
 
 			// ********** STOP Time *********
@@ -221,6 +241,7 @@ public class evalSearch {
 			System.out.println("            Test: " + tests[t]);
 			System.out.println("    Number Found: " + numFound);
 			System.out.println("Number Not Found: " + numNotFound);
+			
 			// stop time
 			long diff = (stop - start) / 1000;
 
