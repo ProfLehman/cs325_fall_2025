@@ -9,6 +9,10 @@ reply they it can guess the number in X guesses. The bot proceeds to make guesse
 display the guess number each time it makes a guess. The bot must also determine if the user has entered an
 incorrect response ie. if the user is not truthful (or just makes a mistake), the bot must stop making guesses.
 
+Add your first and last name to code comments.
+
+Save your code as `lab8.java`
+
 Feel free to be creative and modify the script as long as you meet the following requirements
 - Must use a binary search approach
 - Must predict and display the maximum number of guesses (i.e. log2 n)
@@ -68,6 +72,6 @@ Guess #4: Is you number 437? (y,n): y
  I was able to guess your number in 4 guesses
  ```
 
-## Post code on GitHub and Submit link to your code
+## Post `lab8.java` on GitHub and submit link to code
 
 -- end --
