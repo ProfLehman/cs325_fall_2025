@@ -2,8 +2,6 @@
 # CS 325 Data Structures
 
 ## Lab #9 – Hashing
-
-**Due:** Wednesday, November 5 at 11:59 PM
 **Points:** 25
 
 ---
