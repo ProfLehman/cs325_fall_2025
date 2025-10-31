@@ -19,9 +19,9 @@ You must use a **spreadsheet** to show your answers.
 
 Given the sample data list of 14 names and keys, show the **initial hash position** using an **array size of 23** for each of the following hash functions:
 
-A. Mod hash
-B. Mid-squares hash
-C. String hash
+A. **Mod hash**  
+B. **Mid-squares hash**  
+C. **String hash**      
 
 Use the **6-digit student ID** for the mod and mid-square hashes.
 For mid-square, use the **middle four digits**.
@@ -141,4 +141,5 @@ node {
 
 ---
 
-Would you like me to format this further for **GitHub Pages display** (e.g., collapsible sections, code block syntax highlighting, and automatic diagram placeholders)?
+-- end --
+
