@@ -22,11 +22,29 @@ public class hashChaining {
 
     // *** hash function
     public int hash(long key) {
+
+        // mid squares hash
+        // long temp = key * key * key;
+        // String tempString = Long.toString(temp);
+        // String sub_string = tempString.substring(2, 4);
+        // key = Long.parseLong(sub_string);
+
+        // string hash
+        // String tempString = Long.toString(key);
+        // long temp_key = 0;
+        // int m = 1;
+        // for (int x = 0; x < tempString.length(); x++) {
+        // int temp = m * (int) tempString.charAt(x);
+        // //m++;
+        // temp_key = temp_key + temp;
+        // }
+        // key = temp_key;
+
+        // last step, you must mod by array length
         // note: mod ie. % does not work with long
         // thus mod = key - (key/max) * max
-
         return (int) (key - ((key / MAX) * MAX));
-        // return 0;
+
     }
     // *******************************************
 
@@ -102,6 +120,10 @@ public class hashChaining {
         }
         System.out.println();
         System.out.println("Total values hashed: " + tot);
+        System.out.println();
+        // note: when looking at the totals at each level, if there are 2 with 2
+        // conflicts, that represents
+        // four items
 
     }
 
