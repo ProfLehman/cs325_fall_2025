@@ -2,11 +2,13 @@
  * hashChaining.java
  * prof. lehman
  * fall 2025
- * demonstrates hashing with chaining
+ * 
+ * class implements hashing with chaining
  * uses node.java as a storage structure
  */
 public class hashChaining {
 
+    // data
     node data[]; // array of nodes
     int cc[]; // counts for items hashed
     int MAX; // hash array storage size
@@ -22,9 +24,9 @@ public class hashChaining {
     public int hash(long key) {
         // note: mod ie. % does not work with long
         // thus mod = key - (key/max) * max
-       
+
         return (int) (key - ((key / MAX) * MAX));
-        //return 0;
+        // return 0;
     }
     // *******************************************
 
@@ -41,6 +43,7 @@ public class hashChaining {
             System.out.println(key + " Added 1st key at " + initialPosition);
         } else // not empty 1 or more nodes already there
         {
+            // add new node to beginning of list for O(1) performance
             node temp = new node(key, null);
             temp.next = data[initialPosition];
             data[initialPosition] = temp;

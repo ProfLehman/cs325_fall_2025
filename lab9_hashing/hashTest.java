@@ -1,13 +1,13 @@
-//hash.java
+//hashTest.java
 //dr. lehman
 //fall 2025
 //demonstrate hashChaining class
 
-public class hash {
+public class hashTest {
 
     public static void main(String[] args) {
 
-        //create hash table that can hold 13 values
+        // create hash table that can hold 13 values
         hashChaining myApp = new hashChaining(17);
 
         myApp.insert(170);
@@ -27,7 +27,7 @@ public class hash {
         System.out.println("find 1 " + myApp.find(1));
         System.out.println("find 131 " + myApp.find(131));
 
-        myApp.showStats();	
-    }//main
+        myApp.showStats();
+    }// main
 
-}//class
+}// class
