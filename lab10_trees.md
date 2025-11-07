@@ -86,6 +86,14 @@ Also:
 
 Example style (shown in class):
 
+```
+      H
+     / \
+    A   U
+     \
+      B
+```
+
 root = 1  
 free = 5
 
@@ -98,7 +106,17 @@ free = 5
 | 4     | B    | -1   | -1    |
 | 5     |      | 2    | -1    |
 
+```
+      H
+     / \
+    A   U
+     \
+      B
+```
+
 Compute memory usage assuming space allocated for **100 nodes**.
+
+
 
 ---
 
@@ -106,6 +124,14 @@ Compute memory usage assuming space allocated for **100 nodes**.
 Show the **single-array representation** (heap-like layout) of the binary tree from Question #1.
 
 Example format (shown in class):
+
+```
+      H
+     / \
+    A   U
+     \
+      B
+```
 
 | index | data |
 |------:|------|
