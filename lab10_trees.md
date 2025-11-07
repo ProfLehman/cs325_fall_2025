@@ -1,7 +1,7 @@
 # CS325 Data Structures  
 **Lab #10 – Binary Trees**  
 **25 points**  
-**Due:** 5:00 pm, Friday, November 17, 2023  
+**Due:** 5:00 pm, Friday, November 17, 2025 
 *Must submit paper copies.*
 
 Type or neatly hand-write your answers.  
