@@ -138,19 +138,21 @@ Example format (shown in class):
 | 0     | H    |
 | 1     | A    |
 | 2     | U    |
-| 3     |      |
+| 3     | null |
 | 4     | B    |
-| 5     |      |
+| 5     | null |
 
 Then compute memory usage assuming **100 total positions**.
 
 Reference formulas:
 
 ```
-Root index: 0
+Root index is **always 0**
 Parent: (index − 1) / 2
 Left Child: (2 × index) + 1
 Right Child: (2 × index) + 2
+
+-1 for int data and can use null for char data
 ```
 
 ---
