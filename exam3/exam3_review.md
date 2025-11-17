@@ -1,4 +1,4 @@
-# CS 325 Exam #3 Review – Fall 2023
+# CS 325 Exam #3 Review – Fall 2025
 **125 Points**
 
 This exam will cover **searching, trees, heaps, and hashing**.
@@ -15,13 +15,12 @@ Also review your **class notes** and readings from this course (selected topics 
 - Traverse a binary tree using **pre-order**, **in-order**, and **post-order** traversals  
 - Determine the **number of nodes at a given level** and **total nodes** in a tree given the number of levels  
 - Recognize balancing techniques (**Red-Black**, **AVL**) and their importance  
-  - Big-O search performance: **O(log₂ N)**  
+- Binary Search Tree Big-O search performance: **O(log₂ N)**  
 - Tree Implementations  
   - Dynamic structure (**node**)  
   - Array of nodes (**info, left, right**) including root and free list  
   - Single array (non-linked array) using formulas to compute **left child**, **right child**, and **parent**  
-- Describe **Heap Sort** including big-O analysis  
-  - Best, average, worst case: **O(N log₂ N)**  
+- Describe **Heap Sort** including big-O analysis **O(N log₂ N)**  
 - Use a **heap as a priority queue**
 
 ---
@@ -47,4 +46,14 @@ Also review your **class notes** and readings from this course (selected topics 
 ---
 
 ## Sample Data for Review
+
+| 0  | 1  | 2  | 3  | 4  | 5  | 6  | 7  |
+|----|----|----|----|----|----|----|----|
+| 25 | 10 | 40 | 15 | 20 | 30 | 5  | 35 |
+
+
+
+-- end --
+
+
 
