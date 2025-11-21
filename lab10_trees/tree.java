@@ -13,9 +13,11 @@ public class tree {
 	{
 		if (n != null)
 		{
+			
 			inorder(n.left);
-			System.out.print( n.data + ", " );
+			
 			inorder(n.right);
+			System.out.print( n.data + ", " );
 		}
 	}
 	
@@ -71,16 +73,19 @@ public class tree {
 
 		Node root = null;
 		
-		root = insert(root, 10);
-		root = insert(root, 5);
-		root = insert(root, 20);
-		root = insert(root, 15);
+		root = insert(root, 32);
+		root = insert(root, 4);
+		root = insert(root, 84);
+		root = insert(root, 16);
+		root = insert(root, 64);
+		root = insert(root, 100);
 
 		inorder(root);
+		
 		System.out.println();
 		
 		
-		System.out.println( find(root, 15) );
+		System.out.println( find(root, 84) );
 		System.out.println( find(root, 7) );
 		
 		System.out.println( "height = " + height(root, 0) );
