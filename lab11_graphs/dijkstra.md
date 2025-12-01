@@ -2,7 +2,7 @@
 
 Find the **shortest path** between A and all other nodes
 
-Note: cannot be used with negative wieghts
+Note: cannot be used with negative weights
 
 ```mermaid
 flowchart LR
@@ -41,7 +41,7 @@ flowchart LR
 |  | F |  |  |  |
 
 ---
-### Completed
+### Completed (final values shown in bold)
 | Visited | Node | Distance | Previous | Path |
 | --- | --- | --- | --- | --- |
 | v1 | A | **0** |  |  |
