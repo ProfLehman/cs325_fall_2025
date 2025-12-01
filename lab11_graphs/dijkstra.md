@@ -26,8 +26,8 @@ flowchart LR
 - Set starting node A distance to 0 and all other distances to infinity &infin;
 - Mark all nodes as `unvisited`
 - While unvisited nodes remain
-  - select unvisited node with lowest distance
-  - update the distance (if lower) to adjacent nodes (update Distance, Prev and Path)
+  - select unvisited node with lowest distance (note: in code would use priority queue)
+  - check all adjacent nodes and if the distance is lower, update the Distance, Previous, and Path
   - mark this node as visited
 
 ### Start
