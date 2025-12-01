@@ -29,8 +29,9 @@ flowchart LR
     - Update distance if the distance is lower to adjacent nodes (update the Distance, Previous, and Path)
     
 ### Completed
-| Previous | | A, E | B, D, D | B, E | A | C, D, E, D | | 
+|  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- |--- | --- |
+| Previous | | A, **E** | B, D, **D** | B, **E** | **A** | C, D, E, **D** | | 
 | **Node** | **A** | **B**   | **C**   | **D**   | **E**   | **F** |  |
 | Distance  |  **0**   | &infin; | &infin; | &infin; | &infin; | &infin; |  |
 |           |  0   |   **8**     |   **13**    |  **10**     |  **5**     |   **14**    |   |
@@ -39,7 +40,7 @@ flowchart LR
 |  |  |  |  |  |  |  |  |
 |           |  0   |   7     |   **10** |  8      |   5     |   **11**    | After 2nd iteration |
 |  |  |  |  |  |  |  |  |
-|           |  0   |   7     |   1 |  8      |   5     |   11    | After 3rd iteration - no change, thus done|
+|           |  0   |   7     |   10 |  8      |   5     |   11    | After 3rd iteration - no change, thus done|
 
 
 
