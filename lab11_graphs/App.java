@@ -19,13 +19,19 @@ import org.jgrapht.util.SupplierUtil;
  * 
  * j.l. lehman
  * 
- * fall 2021
+ * fall 2021 (updated fall 2025)
  * 
  * 
  * Demonstrates use of JGraphT packages
  * www.jgrapht.org
- * Requires Maven in eclipse, see help guide at JGraphT website for
- * assistance with installation of packages
+ *
+ * Download libraries and unzip, will see large list of .jar files in /lib folder
+ * Place App.java in this folder and run from the command line. 
+ *
+ *  javac -cp .:jgrapht-core-1.5.2.jar:jheaps-0.14.jar App.java
+ *  java -cp .:jgrapht-core-1.5.2.jar:jheaps-0.14.jar App
+ *
+ *  note: can also use Maven to manage libraries
  */
 public class App  {
 
